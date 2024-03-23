@@ -1,0 +1,8 @@
+<h1>Lists</h1>
+
+
+<%= link_to("New List", new_list_path) %>
+
+<% @lists.each do |list| %>
+  <%= link_to("Add Bookmark", new_list_bookmark_path(list)) %>
+<% end %>
