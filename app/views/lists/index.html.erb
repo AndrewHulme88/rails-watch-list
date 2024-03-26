@@ -1,8 +1,10 @@
 <h1>Lists</h1>
 
-
+<%= link_to("My Lists", list_path(@lists.first)) %>
 <%= link_to("New List", new_list_path) %>
 
-<% @lists.each do |list| %>
-  <%= link_to("Add Bookmark", new_list_bookmark_path(list)) %>
-<% end %>
+
+
+<div class="cinema">
+  <%= image_tag("cinema-popcorn.jpg", alt: "Cinema") %>
+</div>

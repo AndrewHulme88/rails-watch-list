@@ -1,3 +1,18 @@
 <h1>List</h1>
 
+<% if @list.present? %>
+  <% @list.each do |list| %>
+    <div>
+      <h2><%= list.name %></h2>
+      <%= link_to("Add Bookmark", new_list_bookmark_path(list)) %>
+      <%= link_to "Delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </div>
+  <% end %>
+<% else %>
+  <p>No lists found.</p>
+<% end %>
+
+
+<%# TODO add movies to list %>
+
 <%= link_to("Home", root_path) %>
