@@ -7,7 +7,6 @@
         </button>
       </div>
       <div class="modal-body">
-        <% if @bookmark %>
           <%= simple_form_for [list, bookmark] do |f| %>
             <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie", input_html: { data: { controller: "tom-select" } } %>
             <%= f.input :comment, placeholder: "Enter a comment about the movie" %>
@@ -16,9 +15,6 @@
               <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Back</button>
             </div>
           <% end %>
-        <% else %>
-          <p>No bookmark found.</p>
-        <% end %>
       </div>
     </div>
   </div>

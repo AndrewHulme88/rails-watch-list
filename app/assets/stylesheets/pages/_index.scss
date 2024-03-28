@@ -1,2 +1,15 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.btn.btn-flat {
+  background-color: rgb(51, 211, 51);
+}
+
+.btn.btn-cancel {
+  background-color: rgb(217, 24, 24);
+}
+
+.btn {
+  border-radius: 5px;
+  border: 1px solid black;
+}
